@@ -38,7 +38,7 @@ function displayWishes(index) {
         wishesContainer.appendChild(wishElement);
 
         // Устанавливаем задержку для следующего пожелания
-        setTimeout(() => displayWishes(index + 1), 3000);
+        setTimeout(() => displayWishes(index + 1), 1200);
     }
 }
 
