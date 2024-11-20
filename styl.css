@@ -34,7 +34,7 @@ h1, h2 {
 .animated-text {
     opacity: 0;
     animation: fadeInText 2s ease forwards;
-    animation-delay: 2s;
+    animation-delay: 0.5s;
 }
 
 @keyframes fadeInText {
