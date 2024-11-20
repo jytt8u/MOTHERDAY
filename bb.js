@@ -42,9 +42,9 @@ function displayWishes(index) {
     }
 }
 
-// Запускаем отображение пожеланий
+setTimeout ( () => {
 displayWishes(0);
-
+}, 1000);
 // Функция для генерации сердечек
 function createHeart() {
     const heart = document.createElement('div');
