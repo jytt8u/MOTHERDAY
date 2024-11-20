@@ -1,4 +1,4 @@
-// Массив с пожеланиями
+ // Массив с пожеланиями
 const wishes = [
     "Пусть каждый твой день будет наполнен счастьем и любовью.",
     "Желаем здоровья, тепла и вдохновения!",
@@ -38,7 +38,7 @@ function displayWishes(index) {
         wishesContainer.appendChild(wishElement);
 
         // Устанавливаем задержку для следующего пожелания
-        setTimeout(() => displayWishes(index + 1), 1500);
+        setTimeout(() => displayWishes(index + 1), 3000);
     }
 }
 
@@ -49,14 +49,24 @@ displayWishes(0);
 function createHeart() {
     const heart = document.createElement('div');
     heart.classList.add('heart');
-    heart.style.left = Math.random() * 100 + 'vw';
-    heart.style.animationDuration = Math.random() * 2 + 3 + 's';
+
+    // Генерируем случайное положение по ширине, предпочтительно ближе к краям (0-20% или 80-100%)
+    const randomPosition = Math.random();
+    if (randomPosition < 0.2) {
+        heart.style.left = Math.random() * 20 + 'vw';  // Левый край
+    } else if (randomPosition > 0.8) {
+        heart.style.left = (Math.random() * 20 + 80) + 'vw';  // Правый край
+    } else {
+        heart.style.left = Math.random() * 100 + 'vw';  // Случайное положение по всей ширине
+    }
+
+    heart.style.animationDuration = Math.random() * 2 + 3 + 's'; // Разные скорости анимации
     document.getElementById('heartsContainer').appendChild(heart);
 
     setTimeout(() => {
         heart.remove();
-    }, 5000);
+    }, 5000); // Удаляем сердечко после завершения анимации
 }
 
-// Генерация сердечек каждые 300 мс
-setInterval(createHeart, 300);
+// Генерация сердечек каждые 150 мс (чаще, чем раньше)
+setInterval(createHeart, 150);
