@@ -6,63 +6,116 @@
     <title>Поздравление с Днем Матери</title>
     <link rel="stylesheet" href="styl.css">
     <style>
-        /* Центрирование контейнера для видео */
+        /* Основные стили для страницы */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #fff5e1;
+            overflow-y: auto; /* Убедитесь, что прокрутка разрешена */
+        }
+
+        /* Контейнер для основного контента */
+        #content {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto; /* Центрирование основного контента */
+        }
+
+        /* Контейнер для видео */
+        #videoSection {
+            margin-top: 20px;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto; /* Центрирование контейнера видео */
+        }
+
+        /* Центрирование видео и стили */
         .video-section {
             text-align: center;
-            margin: 20px 0;
+            margin-bottom: 30px;
         }
 
-        /* Центрирование самого видео с использованием Flexbox */
+        /* Стили для видео */
         .video-wrapper {
-            display: inline-flex;
+            display: flex;
             justify-content: center;
-            align-items: center;
+            max-width: 100%;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border: 5px solid #ff69b4; /* Добавлена рамка для улучшения стиля */
+            border-radius: 15px; /* Добавляем закругленные углы для лучшего внешнего вида */
+            overflow: hidden;
         }
 
-        /* Стили для предотвращения дергания и обеспечения статичного положения */
         video {
             max-width: 100%;
             height: auto;
         }
+
+        /* Стили для заголовков видео */
+        h2 {
+            font-size: 1.5em;
+            color: #ff69b4;
+        }
+
+        /* Медиа-запросы для мобильных устройств */
+        max-width: 768px {
+            .video-section h2 {
+                font-size: 1.2em;
+            }
+
+            .video-wrapper {
+                padding: 10px;
+            }
+
+            #content {
+                padding: 10px;
+            }
+        }
     </style>
 </head>
 <body>
-    <header>
-        <h1>С Днем Матери!</h1>
-    </header>
+    <!— Основной контент страницы —>
+    <div id="content">
+        <header>
+            <h1>С Днем Матери!</h1>
+        </header>
 
-    <main>
         <section id="greeting">
             <h2>Дорогая мама!</h2>
             <div id="wishesContainer">
-                <!— Пожелания появятся здесь —>
+                <!— Пожелания —>
+                <p>Пусть каждый твой день будет наполнен счастливыми моментами.</p>
+                <p>Ты — наша опора и вдохновение. Пусть сердце твое всегда остается светлым и добрым.</p>
+                <p>Ты даришь нам радость и свет. Спасибо тебе за всю твою доброту и заботу!</p>
+                <!— Можно добавить больше пожеланий —>
             </div>
         </section>
+    </div>
 
-        <div id="heartsContainer"></div>
-
-        <!— Центрированная секция для видео - Часть 1 —>
+    <!— Секция для видео —>
+    <div id="videoSection">
         <div class="video-section">
             <h2>Поздравительное видео - Часть 1</h2>
             <div class="video-wrapper">
-                <video controls width="640" height="360">
+                <video controls>
                     <source src="mother/video/motherpart2.mp4" type="video/mp4">
                     Ваш браузер не поддерживает видео-теги.
                 </video>
             </div>
         </div>
 
-        <!— Центрированная секция для видео - Часть 2 —>
         <div class="video-section">
             <h2>Поздравительное видео - Часть 2</h2>
             <div class="video-wrapper">
-                <video controls width="640" height="360">
+                <video controls>
                     <source src="mother/video/motherpart1.mp4" type="video/mp4">
                     Ваш браузер не поддерживает видео-теги.
                 </video>
             </div>
         </div>
-    </main>
+    </div>
 
     <footer>
         <p>&copy; 2024 Поздравление с Днем Матери. Все права защищены.</p>
