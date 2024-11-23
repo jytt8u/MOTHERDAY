@@ -4,46 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Поздравление с Днем Матери</title>
-    <!— Подключение CSS для оформления —>
     <link rel="stylesheet" href="styl.css">
+    <style>
+        /* Центрирование контейнера для видео */
+        .video-section {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        /* Центрирование самого видео с использованием Flexbox */
+        .video-wrapper {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Стили для предотвращения дергания и обеспечения статичного положения */
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
-    <!— Шапка сайта с заголовком —>
     <header>
         <h1>С Днем Матери!</h1>
     </header>
 
-    <!— Основной блок с поздравлениями —>
     <main>
         <section id="greeting">
-            <h2 class="animated-text">Дорогая мама!</h2>
+            <h2>Дорогая мама!</h2>
             <div id="wishesContainer">
-                <!— Пожелания будут добавлены здесь через JavaScript —>
+                <!— Пожелания появятся здесь —>
             </div>
         </section>
 
-        <!— Контейнер для сердечек, которые будут анимированы на фоне —>
         <div id="heartsContainer"></div>
+
+        <!— Центрированная секция для видео - Часть 1 —>
+        <div class="video-section">
+            <h2>Поздравительное видео - Часть 1</h2>
+            <div class="video-wrapper">
+                <video controls width="640" height="360">
+                    <source src="mother/video/motherpart2.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает видео-теги.
+                </video>
+            </div>
+        </div>
+
+        <!— Центрированная секция для видео - Часть 2 —>
+        <div class="video-section">
+            <h2>Поздравительное видео - Часть 2</h2>
+            <div class="video-wrapper">
+                <video controls width="640" height="360">
+                    <source src="mother/video/motherpart1.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает видео-теги.
+                </video>
+            </div>
+        </div>
     </main>
 
-    <!— Добавляем видео внизу страницы —>
-<section id="videoSection1">
-<h2>Поздравительное видео - Часть 1</h2>
-<video controls width="640" height="360">
-<source src="mother/video/motherpart2.mp4" type="video/mp4">
-Ваш браузер не поддерживает видео-теги.
-</video>
-</section>
+    <footer>
+        <p>&copy; 2024 Поздравление с Днем Матери. Все права защищены.</p>
+    </footer>
 
-<section id="videoSection2">
-<h2>Поздравительное видео - Часть 2</h2>
-<video controls width="640" height="360">
-<source src="mother/video/motherpart1.mp4" type="video/mp4">
-Ваш браузер не поддерживает видео-теги.
-</video>
-</section>
-
-    <!— Подключение JavaScript для функциональности —>
     <script src="bb.js"></script>
 </body>
 </html>
